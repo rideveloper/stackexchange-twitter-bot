@@ -16,7 +16,10 @@ public class TestController {
     private QuestionService questionService;
 
     @GetMapping("/test")
-    public QuestionResponse testThis() {
-        return questionService.getQuestions();
+    public QuestionResponse.Item testThis() {
+        QuestionResponse.Item question = questionService.getQuestionToTweet();
+        questionService.saveTweetedQuestion(question);
+
+        return question;
     }
 }

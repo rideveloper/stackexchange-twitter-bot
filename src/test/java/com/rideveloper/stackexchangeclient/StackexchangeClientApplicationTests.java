@@ -19,7 +19,7 @@ class StackexchangeClientApplicationTests {
 
     @Test
     final void whenRequestIsPerformed_thenNoExceptions() throws ClientProtocolException, IOException {
-        questionService.getQuestions();
+        questionService.getQuestionToTweet();
     }
 
 }
